@@ -1,0 +1,50 @@
+.clients {
+  @extend %container;
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.clients ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (min-width: 480px) {
+    flex-wrap: wrap;
+    flex-direction: row;
+margin-top: -30px;
+      margin-left: -30px;
+  }
+}
+.clients a {
+  @extend %center-flex;
+  width: 210px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  fill: #afb1b8;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 30px;
+    @media screen and (min-width: 480px) {
+      margin-left: 30px;}
+      @media screen and (min-width: 1200px) {
+        width: 170px;
+      }
+}
+.clients a:hover {
+  fill: $accent-color;
+  border-color: $accent-color;
+  cursor: pointer;
+}
+// .clients a:not(:last-child) {
+//   margin-right: 30px;
+// }

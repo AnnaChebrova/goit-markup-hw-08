@@ -1,0 +1,119 @@
+.features {
+  @extend %container;
+  margin-top: 60px;
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    margin-top: 94px;
+  }
+  &-item {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+    @media screen and (min-width: 768px) {
+      width: 354px;
+      margin-top: 30px;
+      margin-left: 30px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+    }
+  }
+  & > ul {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      margin-top: -30px;
+      margin-left: -30px;
+    }
+    @media screen and (max-width: 1199px) {
+      flex-wrap: wrap;
+    }
+  }
+}
+.features-main {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $text-color;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+}
+.features-description {
+  width: 100%;
+  height: 75px;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $link-color;
+}
+.icon-features {
+  width: 100%;
+  height: 120px;
+  background-color: $icon-color;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+.products-title,
+.employee-title,
+.clients-title {
+  padding-bottom: 30px;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $text-color;
+  @media screen and (min-width: 1200px) {
+  font-size: 36px;
+padding-bottom: 60px;}
+}
+.products-container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  @extend %container;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
+.products {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+}
+.products img {
+  width: 370px;
+  height: 294px;
+}
+.products-item {
+  position: relative;
+}
+.products-item > p {
+  position: absolute;
+  bottom: 0;
+  padding: 27px;
+  width: -webkit-fill-available;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $white-color;
+  background-color: rgba(47, 48, 58, 0.8);
+}
