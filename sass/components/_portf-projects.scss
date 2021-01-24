@@ -1,8 +1,18 @@
 .projects > ul {
-  display: flex;
-  flex-wrap: wrap;
   @extend %container;
-  padding-bottom: 94px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    padding-bottom: 94px;
+  }
 }
 
 /*Альтернатива ширине элементов контейнера
@@ -49,14 +59,35 @@
   transform: translateY(0px);
 }
 .projects-item img {
-  height: 294px;
-  width: 370px;
+  width: 100%;
+  @media screen and (min-width: 1200px) {
+    width: 370px;
+    height: 294px;
+  }
 }
-.projects-item:not(:nth-child(3n)) {
-  margin-right: 30px;
+.projects-item {
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 370px;
+  }
 }
-.projects-item:not(:nth-last-child(-n + 3)) {
+.projects-item:not(:last-child) {
   margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .projects-item:not(:nth-child(2n)) {
+    margin-right: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects-item:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+  .projects-item:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 30px;
+  }
 }
 .project-title {
   margin-bottom: 4px;
