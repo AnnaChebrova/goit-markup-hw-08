@@ -113,17 +113,17 @@ img {
   display: block;
 }
 
-.menu-button.is-open .menu-icon {
-  display: none;
-}
-
 .menu-icon,
 .menu-icon-close {
   fill: #212121;
 }
 
+.menu-container {
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
-  .menu-container.is-open {
+  .menu-container {
     position: absolute;
     top: 100%;
     left: 0;
@@ -132,11 +132,12 @@ img {
     border-top: 1px solid #ececec;
     background-color: #ffffff;
     text-align: center;
+    z-index: 1;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .menu-container.is-open {
+  .menu-container {
     display: flex;
     justify-content: space-around;
   }
@@ -307,15 +308,16 @@ img {
 }
 
 /*--Portfolio--*/
-.header {
+.header-container {
   border-bottom: 1px solid #ececec;
 }
 
 .active-portfolio::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 98px;
+  bottom: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 78px;
   height: 4px;
   display: inline-flex;
@@ -324,12 +326,19 @@ img {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/*--Portfolio--*/
+@media screen and (min-width: 768px) {
+  .active-portfolio::after {
+    bottom: 0;
+    left: 98px;
+    transform: none;
+  }
+}
+
 .overlay {
   padding-top: 118px;
   padding-bottom: 118px;
   background-color: #2f303a;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/Hero480 img.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Hero480-min.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -340,6 +349,36 @@ img {
     max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
+  }
+}
+
+@media (min-resolution: 2dppx) {
+  .overlay .overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Hero480-2x-min.jpg");
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .overlay .overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Hero767-min.jpg");
+  }
+}
+
+@media screen and (min-width: 767px) and (min-resolution: 2dppx) {
+  .overlay .overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Hero767@2x-min.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Hero1200-min.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .overlay .overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Hero1200@2x-min.jpg");
   }
 }
 
@@ -908,15 +947,22 @@ textarea {
 
 .employee-item {
   width: 100%;
-  height: 428px;
+  height: auto;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
+@media screen and (min-width: 480px) {
+  .employee-item {
+    height: 622px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .employee-item {
     width: 354px;
+    height: 536px;
     margin-top: 30px;
     margin-left: 30px;
   }
@@ -925,6 +971,7 @@ textarea {
 @media screen and (min-width: 1200px) {
   .employee-item {
     width: 270px;
+    height: auto;
   }
 }
 
@@ -935,8 +982,15 @@ textarea {
 }
 
 .employee-foto {
-  width: 100%px;
-  height: 260px;
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .employee-foto {
+    width: 450px;
+    height: auto;
+  }
 }
 
 .employee-name {
@@ -963,6 +1017,7 @@ textarea {
   justify-content: center;
   width: 206px;
   margin-top: 16px;
+  margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
 }

@@ -17,7 +17,7 @@
 <header>
     <div class="header-container">
         <p><span class="logo-web">Web</span><span class="logo-studio">Studio</span></p>
-        <div class="menu-container is-open">
+        <div class="menu-container">
         <nav class="site-nav">
             <a href class="active-studio">Студия</a>
             <a href="./portfolio.html">Портфолио</a>
@@ -149,7 +149,18 @@
         <h2 class="employee-title">Наша команда</h2>
         <ul class="employee-description">
              <li class="employee-item">
-                 <img class="employee-foto" src="./images/Игорь Демьяненко.jpg" alt="foto1">
+                 <picture class="employee-foto">
+                     <source
+                      srcset="./images/IgorDem480-min.jpg 1x,
+                      ./images/IgorDem480@2x-min.jpg 2x" media="(max-width: 767px)" />
+                      <source 
+                      srcset="./images/IgorDem768-min.jpg 1x,
+                      ./images/IgorDem768@2x-min.jpg 2x" media="(min-width: 768px)" />
+                      <source 
+                      srcset="./images/IgorDem1200-min.jpg 1x, 
+                      ./images/IgorDem1200@2x-min.jpg 2x" media="(min-width: 1200px)" />
+                      <img src="./images/IgorDem480-min.jpg" alt="фото Игоря Демьяненко"/>
+                </picture>
                  <h3 class="employee-name">Игорь Демьяненко</h3>
                  <p class="employee-position">Product Designer</p>
                  <ul>
@@ -168,7 +179,15 @@
                         </ul>
              </li>
              <li class="employee-item">
-                 <img class="employee-foto" src="./images/Ольга Репина.jpg" alt="foto2">
+<picture class="employee-foto">
+    <source srcset="./images/OlgaRep480-min.jpg 1x,
+                      ./images/OlgaRep480@2x-min.jpg 2x" media="(max-width: 767px)" />
+    <source srcset="./images/OlgaRep768-min.jpg 1x,
+                      ./images/OlgaRep768@2x-min.jpg 2x" media="(min-width: 768px)" />
+    <source srcset="./images/OlgaRep1200-min.jpg 1x, 
+                      ./images/OlgaRep1200@2x-min.jpg 2x" media="(min-width: 1200px)" />
+    <img src="./images/OlgaRep480-min.jpg" alt="фото Ольги Репиной" />
+</picture>
                  <h3 class="employee-name">Ольга Репина</h3>
                  <p class="employee-position">Frontend Developer</p>
                 <ul>
@@ -191,8 +210,16 @@
                 </ul>
              </li>
              <li class="employee-item">
-                 <img class="employee-foto" src="./images/Николай Тарасов.jpg" alt="foto3">
-                 <h3 class="employee-name">Николай Тарасов</h3>
+                <picture class="employee-foto">
+                    <source srcset="./images/NikolayTar480-min.jpg 1x,
+                                      ./images/NikolayTar480@2x-min.jpg 2x" media="(max-width: 767px)" />
+                    <source srcset="./images/NikolayTar768-min.jpg 1x,
+                                      ./images/NikolayTar768@2x-min.jpg 2x" media="(min-width: 768px)" />
+                    <source srcset="./images/NikolayTar1200-min.jpg 1x, 
+                                      ./images/NikolayTar1200@2x-min.jpg 2x" media="(min-width: 1200px)" />
+                    <img src="./images/NikolayTar480-min.jpg" alt="фото Николая Тарасова" />
+                </picture>
+                  <h3 class="employee-name">Николай Тарасов</h3>
                  <p class="employee-position">Marketing</p> 
                 <ul>
                     <li class="employee-icon"><a href=""><svg width="20px" height="20px">
@@ -214,8 +241,16 @@
                 </ul>
              </li>
              <li class="employee-item">
-                 <img class="employee-foto" src="./images/Михаил Ермаков.jpg" alt="foto4">
-                 <h3 class="employee-name">Михаил Ермаков</h3>
+                <picture class="employee-foto">
+                    <source srcset="./images/MikhailErm480-min.jpg 1x,
+                                                      ./images/MikhailErm480@2x-min.jpg 2x" media="(max-width: 767px)" />
+                    <source srcset="./images/MikhailErm768-min.jpg 1x,
+                                                      ./images/MikhailErm768@2x-min.jpg 2x" media="(min-width: 768px)" />
+                    <source srcset="./images/MikhailErm1200-min.jpg 1x, 
+                                                      ./images/MikhailErm1200@2x-min.jpg 2x" media="(min-width: 1200px)" />
+                    <img src="./images/MikhailErm480-min.jpg" alt="фото Михаила Ермакова" />
+                </picture>
+                           <h3 class="employee-name">Михаил Ермаков</h3>
                  <p class="employee-position">UI Designer</p>
                 <ul>
                     <li class="employee-icon"><a href=""><svg width="20px" height="20px">

@@ -8,7 +8,7 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("../../images/Hero480\ img.jpg");
+    url("../images/Hero480-min.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -17,7 +17,59 @@
     padding-top: 200px;
     padding-bottom: 200px;
   }
+  @media (min-resolution: 2dppx) {
+    .overlay {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/Hero480-2x-min.jpg");
+    }
+  }
+  @media screen and (min-width: 767px) {
+    .overlay {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/Hero767-min.jpg");
+    }
+    @media (min-resolution: 2dppx) {
+      .overlay {
+        background-image: linear-gradient(
+            to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+          ),
+          url("../images/Hero767@2x-min.jpg");
+      }
+    }
+  }
 }
+@media screen and (min-width: 1200px) {
+  .overlay {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/Hero1200-min.jpg");
+
+    @media (min-resolution: 2dppx) {
+      .overlay {
+        background-image: linear-gradient(
+            to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+          ),
+          url("../images/Hero1200@2x-min.jpg");
+      }
+    }
+  }
+}
+
 .hero {
   text-align: center;
   margin-left: auto;
