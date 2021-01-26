@@ -37,21 +37,22 @@
 .menu-button .menu-icon-close {
   display: none;
 }
+
 .menu-button.is-open .menu-icon-close {
   display: block;
+}
+.menu-button.is-open .menu-icon {
+  display: none;
 }
 
 .menu-icon,
 .menu-icon-close {
   fill: #212121;
 }
-.menu-container {
-  display: none;
-}
 
 .menu-container {
   @media screen and (max-width: 767px) {
-    // display: block;
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -61,7 +62,11 @@
     background-color: $white-color;
     text-align: center;
     z-index: 1;
+    &.is-open {
+      display: block;
+    }
   }
+
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-around;

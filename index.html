@@ -17,7 +17,7 @@
 <header>
     <div class="header-container">
         <p><span class="logo-web">Web</span><span class="logo-studio">Studio</span></p>
-        <div class="menu-container">
+        <div class="menu-container" data-menu>
         <nav class="site-nav">
             <a href class="active-studio">Студия</a>
             <a href="./portfolio.html">Портфолио</a>
@@ -36,10 +36,10 @@
             </li>
         </ul>
         </div>
-        <button type="button" class="menu-button is-open">
+        <button type="button" class="menu-button is-open" data-menu-button>
             <svg width="40px" height="40px" aria-label="переключатель мобильного меню">
-                <use class="menu-icon-close" href="./images/symbol-defs (1).svg#icon-close_40px"></use>
-                <use class="menu-icon" href="./images/symbol-defs (1).svg#icon-menu_40px"></use>
+                <use class="menu-icon" href="./images/symbol-defs (1).svg#icon-close_40px"></use>
+                <use class="menu-icon-close" href="./images/symbol-defs (1).svg#icon-menu_40px"></use>
             </svg>
         </button>
     </div>
@@ -48,12 +48,12 @@
     <section class="hero">
        <div class="overlay">
         <h1 class="hero-title">Эффективные решения <br> для вашего бизнеса</h1>
-        <button type="button" class="hero-button">Заказать услугу</button>
+        <button type="button" class="hero-button" data-modal-open>Заказать услугу</button>
         </div>
-        <div class="backdrop is-hidden">
+        <div class="backdrop is-hidden" data-modal>
             <div class="modal">
                 <form>
-                    <button type="button" class="btn-close">
+                    <button type="button" class="btn-close" data-modal-close>
                         <svg width="18px" height="18px">
                         <use href="./images/sprite-svg.svg#icon-close-black-18dp-2-1"></use>
                         </svg>
@@ -298,7 +298,9 @@
             </ul>
         </section>
     </main>
-</body>
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
+        </body>
 <footer class="footer">
     <div class="footer-container">
         <div class="address">
